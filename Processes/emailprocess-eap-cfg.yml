@@ -1,0 +1,93 @@
+# Config Version: 1.1.0
+# Push Assesment, Evaluation and Physician Order Forms
+
+### Filter params which would be used
+### in the custom reports page
+StaticReportFilters:
+  - name: "Forms"
+    type: "dropdown"
+    value:
+      - "Discharge Summary / Order"
+      - "Initial /Recert Order"
+      - "Physical Therapy Initial/Recert Orders & Care Plan" 
+      - "Physician and Mid Level Progress Note"
+      - "Physician Order" 
+      - "Plan of Care" 
+      - "PT Physician Orders"
+      - "PT/INR Report to Physician" 
+      - "SN Initial/Recert Order & Care Plan"
+      - "SN Physician Orders"
+      - "Wound Care Orders"
+      - "OASIS-D1 Physical Therapy Start of Care"
+
+
+  - name: "Chart Status"    
+    type: "dropdown"
+    value:
+      - "Pre-Admit"
+      - "Admitted"
+      - "Transfer"
+      - "Discharged"
+      - "Hospitalized"
+      - "Non-Admit"
+      - "Pending Discharge"
+      - "Deceased"
+      - "Bereaved"
+      - "Palliative"
+
+  - name: "Form Statuses"
+    type: "dropdown"
+    value:
+      - "Sent To Office"
+      - "Corrected"
+      - "To Be Signed"
+      - "Shared"
+      - "Completed"
+
+  - name: "Printed"
+    type: "radio"
+    value:
+      - "Both"
+
+  - name: "Faxed"
+    type: "radio"
+    value:
+      - "Not Faxed"    
+
+  - name: "Signed"
+    type: "radio"
+    value:
+      - "Both"
+
+  - name: "Returned"
+    type: "radio"
+    value:
+      - "Both"
+
+  - name: "Authorized"
+    type: "radio"
+    value:
+      - "Both"
+
+  - name: "Do Not Track"
+    type: "radio"
+    value:
+      - "Both"       
+
+  
+### In certain flows the To Date in filters is set as 
+### CurrentDate. In certain flows, it is Yesterday
+### Offset is an signed integer representing date from 
+### currentdate. 
+### Eg: -1 is Yesterday; 0 is Today; 1 is Tomorrow 
+FromDateOffset: "-365"
+
+PushColumn: "Fax"
+
+TableSectionName:
+     - "Physicians Orders"
+     - "Interdisciplinary Progress Notes"
+     - "Plan of Care/OASIS"
+
+Notification: "Email"
+
